@@ -1,0 +1,118 @@
+{
+  "checked_on": "2026-10-28",
+  "scope": "Repository revision comparison only; unchanged source does not establish unchanged live network state.",
+  "repositories": [
+    {
+      "repository": "Neptune-Crypto/neptune-core",
+      "snapshot_commit": "db304e79eb722b1c5654c9854360701af10f3749",
+      "observed_commit": "259881b2fc218de833e5fed67ffcf43eaae086d5",
+      "observed_commit_date": "2026-10-26T13:53:41Z",
+      "unchanged": false,
+      "observed_on": "2026-10-28"
+    },
+    {
+      "repository": "Nexusoft/LLL-TAO",
+      "snapshot_commit": "8af9c3387244b4d396c0e00ee81cea78bb9c0177",
+      "observed_commit": "8af9c3387244b4d396c0e00ee81cea78bb9c0177",
+      "observed_commit_date": "2026-09-03T10:10:15Z",
+      "unchanged": true,
+      "observed_on": "2026-10-28"
+    },
+    {
+      "repository": "Quantus-Network/quantus-wasm",
+      "snapshot_commit": "04174ffca2e385ca64d45ee0c9523cc1dd36707d",
+      "observed_commit": "04174ffca2e385ca64d45ee0c9523cc1dd36707d",
+      "observed_commit_date": "2026-10-09T18:13:24Z",
+      "unchanged": true,
+      "observed_on": "2026-10-28"
+    },
+    {
+      "repository": "RAQ-coin/Raqcoin",
+      "snapshot_commit": "160790d5bedd1332722159ce0e0035d6c81f88aa",
+      "observed_commit": "160790d5bedd1332722159ce0e0035d6c81f88aa",
+      "observed_commit_date": "2026-01-22T14:43:53Z",
+      "unchanged": true,
+      "observed_on": "2026-10-28"
+    },
+    {
+      "repository": "abcmint/abcmint",
+      "snapshot_commit": "50594f47b04b1f0119804eafda9fc9d58ad712cb",
+      "observed_commit": "50594f47b04b1f0119804eafda9fc9d58ad712cb",
+      "observed_commit_date": "2025-10-13T11:59:56Z",
+      "unchanged": true,
+      "observed_on": "2026-10-28"
+    },
+    {
+      "repository": "mochimodev/mochimo",
+      "snapshot_commit": "bbbaceabe5c21b5d8a094cf34c050d28e4ae93f4",
+      "observed_commit": "bbbaceabe5c21b5d8a094cf34c050d28e4ae93f4",
+      "observed_commit_date": "2026-04-18T22:43:46Z",
+      "unchanged": true,
+      "observed_on": "2026-10-28"
+    },
+    {
+      "repository": "nervosnetwork/quantum-resistant-lock-script",
+      "snapshot_commit": "082c0a19ce4e0b2c0b00f7b46f423f59a30afc71",
+      "observed_commit": "082c0a19ce4e0b2c0b00f7b46f423f59a30afc71",
+      "observed_commit_date": "2026-02-04T00:46:30Z",
+      "unchanged": true,
+      "observed_on": "2026-10-28"
+    },
+    {
+      "repository": "pqabelian/abec",
+      "snapshot_commit": "35799bed12f326b10df8227aa93646c563d79cb7",
+      "observed_commit": "35799bed12f326b10df8227aa93646c563d79cb7",
+      "observed_commit_date": "2026-10-12T05:41:27Z",
+      "unchanged": true,
+      "observed_on": "2026-10-28"
+    },
+    {
+      "repository": "qtcchain/qtc",
+      "snapshot_commit": "5adbc7d5c2ac252804fd3c61fce3b9bbc3ad9c24",
+      "observed_commit": "5adbc7d5c2ac252804fd3c61fce3b9bbc3ad9c24",
+      "observed_commit_date": "2026-10-20T20:46:41Z",
+      "unchanged": true,
+      "observed_on": "2026-10-28"
+    },
+    {
+      "repository": "quantumcoinproject/quantum-coin-go",
+      "snapshot_commit": "a8952bb87e4d0bfe3c8d550662d0bcbbc40c2abd",
+      "observed_commit": "a8952bb87e4d0bfe3c8d550662d0bcbbc40c2abd",
+      "observed_commit_date": "2026-08-29T17:05:00Z",
+      "unchanged": true,
+      "observed_on": "2026-10-28"
+    },
+    {
+      "repository": "soqucoin/soqucoin",
+      "snapshot_commit": "0b4d6ab18b687d658a42b8debef1d6db2c7b4aa0",
+      "observed_commit": "aa451186934b10bd215a182b6d2de0b31032492f",
+      "observed_commit_date": "2026-10-28T04:08:43Z",
+      "unchanged": false,
+      "observed_on": "2026-10-28"
+    },
+    {
+      "repository": "theQRL/QRL",
+      "snapshot_commit": "a98af67d8d525e4ae102f77dc41c0ec0fb66db80",
+      "observed_commit": "a98af67d8d525e4ae102f77dc41c0ec0fb66db80",
+      "observed_commit_date": "2026-10-10T21:47:58Z",
+      "unchanged": true,
+      "observed_on": "2026-10-28"
+    },
+    {
+      "repository": "tidecoin/tidecoin",
+      "snapshot_commit": "7d653be5d24e73b49d101578afb33d8d7a889c1d",
+      "observed_commit": "7d653be5d24e73b49d101578afb33d8d7a889c1d",
+      "observed_commit_date": "2026-10-20T08:23:13Z",
+      "unchanged": true,
+      "observed_on": "2026-10-28"
+    },
+    {
+      "repository": "yarsawyer/tidecoin",
+      "snapshot_commit": "7d653be5d24e73b49d101578afb33d8d7a889c1d",
+      "observed_commit": "7d653be5d24e73b49d101578afb33d8d7a889c1d",
+      "observed_commit_date": "2026-10-20T08:23:13Z",
+      "unchanged": true,
+      "observed_on": "2026-10-28"
+    }
+  ]
+}

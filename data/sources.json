@@ -1,0 +1,490 @@
+{
+  "sources": [
+    {
+      "id": "raq-info",
+      "url": "https://raqcoin.net/info.html",
+      "supports": "Genesis date, PoW and community project description.",
+      "source_type": "community-maintained project information"
+    },
+    {
+      "id": "raq-guide",
+      "url": "https://github.com/RAQ-coin/Raqcoin/blob/160790d5bedd1332722159ce0e0035d6c81f88aa/doc/MakeNewKey_Parameters_Guide.md",
+      "supports": "Signing configurations, default 274 and optional UOV choices.",
+      "source_type": "pinned source documentation"
+    },
+    {
+      "id": "raq-multisig",
+      "url": "https://github.com/RAQ-coin/Raqcoin/blob/160790d5bedd1332722159ce0e0035d6c81f88aa/src/script.cpp",
+      "supports": "Multisig script handling.",
+      "source_type": "pinned source code"
+    },
+    {
+      "id": "raq-legacy-break",
+      "url": "https://github.com/mkannwischer/breaking-abc",
+      "supports": "Attack on legacy ABCMint Rainbow parameters.",
+      "source_type": "attack reproduction"
+    },
+    {
+      "id": "raq-history",
+      "url": "https://raqcoin-club.s3.us-west-004.backblazeb2.com/pdf/Raqcoin%E7%A0%94%E7%A9%B6%E6%8A%A5%E5%91%8A.pdf",
+      "supports": "Community history describes the rename in 2022.",
+      "source_type": "community research"
+    },
+    {
+      "id": "mcm-home",
+      "url": "https://mochimo.org/",
+      "supports": "WOTS+ and current PoS status.",
+      "source_type": "project website"
+    },
+    {
+      "id": "mcm-explorer",
+      "url": "https://mochimo.org/explorer/",
+      "supports": "PoS blocks and the transition from PoW.",
+      "source_type": "project block explorer"
+    },
+    {
+      "id": "mcm-code",
+      "url": "https://github.com/mochimodev/mochimo/tree/bbbaceabe5c21b5d8a094cf34c050d28e4ae93f4",
+      "supports": "Pinned implementation reviewed for the chart.",
+      "source_type": "pinned source repository"
+    },
+    {
+      "id": "qrl-history",
+      "url": "https://www.theqrl.org/blog/happy-two-year-qrl-anniversary/",
+      "supports": "June 26, 2018 mainnet launch.",
+      "source_type": "project documentation"
+    },
+    {
+      "id": "qrl-status",
+      "url": "https://www.theqrl.org/2/",
+      "supports": "QRL 2.0 testnet and pending mainnet launch.",
+      "source_type": "project documentation"
+    },
+    {
+      "id": "qrl-xmss",
+      "url": "https://github.com/theQRL/QRL/blob/a98af67d8d525e4ae102f77dc41c0ec0fb66db80/src/qrl/crypto/xmss.py",
+      "supports": "XMSS implementation and hash choices.",
+      "source_type": "pinned source code"
+    },
+    {
+      "id": "qrl-address",
+      "url": "https://docs.theqrl.org/build/address/address-scheme/",
+      "supports": "Address descriptor and parameter fields.",
+      "source_type": "project documentation"
+    },
+    {
+      "id": "nxs-history",
+      "url": "https://www.nexus.io/",
+      "supports": "Original chain history.",
+      "source_type": "project website"
+    },
+    {
+      "id": "nxs-release",
+      "url": "https://github.com/Nexusoft/LLL-TAO/releases/tag/4.0.0",
+      "supports": "Tritium Core 4.0 release in November 2019.",
+      "source_type": "project release record"
+    },
+    {
+      "id": "nxs-activation",
+      "url": "https://github.com/Nexusoft/LLL-TAO/blob/b416c5f7e15901eed7a930e291adf0706e1e71b5/src/TAO/Ledger/timelocks.cpp",
+      "supports": "Version 7 mainnet activation timelock in November 2019.",
+      "source_type": "pinned source code"
+    },
+    {
+      "id": "nxs-explorer",
+      "url": "https://explorer.nexus.io/",
+      "supports": "Stake, Prime and Hash channels.",
+      "source_type": "project block explorer"
+    },
+    {
+      "id": "nxs-signing",
+      "url": "https://github.com/Nexusoft/LLL-TAO/blob/8af9c3387244b4d396c0e00ee81cea78bb9c0177/src/TAO/Ledger/transaction.cpp",
+      "supports": "Falcon/Brainpool verification and signature-chain handling.",
+      "source_type": "pinned source code"
+    },
+    {
+      "id": "nxs-falcon",
+      "url": "https://github.com/Nexusoft/LLL-TAO/blob/8af9c3387244b4d396c0e00ee81cea78bb9c0177/src/LLC/flkey.cpp",
+      "supports": "Falcon parameter logn=9.",
+      "source_type": "pinned source code"
+    },
+    {
+      "id": "tdc-readme",
+      "url": "https://github.com/tidecoin/tidecoin/blob/7d653be5d24e73b49d101578afb33d8d7a889c1d/README.md",
+      "supports": "Genesis history and implemented signing schemes.",
+      "source_type": "pinned source documentation"
+    },
+    {
+      "id": "tdc-activation",
+      "url": "https://github.com/tidecoin/tidecoin/blob/7d653be5d24e73b49d101578afb33d8d7a889c1d/src/kernel/chainparams.cpp",
+      "supports": "Mainnet AuxPoW activation gate.",
+      "source_type": "pinned source code"
+    },
+    {
+      "id": "tdc-validation",
+      "url": "https://github.com/tidecoin/tidecoin/blob/7d653be5d24e73b49d101578afb33d8d7a889c1d/src/validation.cpp",
+      "supports": "Height-gated signature validation.",
+      "source_type": "pinned source code"
+    },
+    {
+      "id": "strk-launch",
+      "url": "https://www.starknet.io/blog/starknets-new-sequencer/",
+      "supports": "Historical Mainnet Alpha milestone.",
+      "source_type": "project documentation"
+    },
+    {
+      "id": "strk-account",
+      "url": "https://starknet-js.com/docs/guides/account/postQuantum/",
+      "supports": "Falcon-512 account example and class hashes.",
+      "source_type": "project documentation"
+    },
+    {
+      "id": "strk-staking",
+      "url": "https://www.starknet.io/staking/",
+      "supports": "Phased staking rollout.",
+      "source_type": "project documentation"
+    },
+    {
+      "id": "strk-vote",
+      "url": "https://starkware.co/blog/whats-next-following-the-starknet-l1-vote/",
+      "supports": "Non-binding research vote and working group.",
+      "source_type": "project documentation"
+    },
+    {
+      "id": "strk-scope",
+      "url": "https://quantum.starkware.co/networks",
+      "supports": "Account, proof and external dependency scope.",
+      "source_type": "project documentation"
+    },
+    {
+      "id": "abel-launch",
+      "url": "https://www.pqabelian.io/milestones",
+      "supports": "2022 mainnet milestone.",
+      "source_type": "project documentation"
+    },
+    {
+      "id": "abel-upgrade",
+      "url": "https://www.pqabelian.io/blog/abelian-completes-major-network-upgrade-at-block-height-464-000",
+      "supports": "Aconcagua upgrade and dual PoW.",
+      "source_type": "project documentation"
+    },
+    {
+      "id": "abel-consensus",
+      "url": "https://github.com/pqabelian/abec/blob/35799bed12f326b10df8227aa93646c563d79cb7/blockchain/consensus/consensus.go",
+      "supports": "PoW verification dispatch.",
+      "source_type": "pinned source code"
+    },
+    {
+      "id": "abel-schemes",
+      "url": "https://community.pqabelian.io/",
+      "supports": "Project cryptographic documentation.",
+      "source_type": "project documentation"
+    },
+    {
+      "id": "algo-pq",
+      "url": "https://algorand.co/technology/post-quantum",
+      "supports": "Deployment history and remaining scope.",
+      "source_type": "project documentation"
+    },
+    {
+      "id": "algo-account",
+      "url": "https://dev.algorand.co/concepts/accounts/post-quantum/",
+      "supports": "Native Falcon-1024 accounts and migration.",
+      "source_type": "project documentation"
+    },
+    {
+      "id": "algo-rekey",
+      "url": "https://dev.algorand.co/concepts/accounts/rekeying/",
+      "supports": "Account authorization changes.",
+      "source_type": "project documentation"
+    },
+    {
+      "id": "algo-consensus",
+      "url": "https://algorand.co/technology/pure-proof-of-stake",
+      "supports": "Consensus design.",
+      "source_type": "project documentation"
+    },
+    {
+      "id": "cell-launch",
+      "url": "https://cellframe.medium.com/ama-with-ceo-dmitry-gerasimov-july-13-2023-f317f5fb1de0",
+      "supports": "July 12, 2023 mainnet launch.",
+      "source_type": "project documentation"
+    },
+    {
+      "id": "cell-consensus",
+      "url": "https://cellframe.net/blog/worklog-october-results-2024/",
+      "supports": "ESBOCS and DAG-PoA roles.",
+      "source_type": "project documentation"
+    },
+    {
+      "id": "cell-assets",
+      "url": "https://cellframe.net/blog/ama-transcript-with-dmitry-gerasimov-february-26-2026/",
+      "supports": "Native assets versus wrapped assets.",
+      "source_type": "project documentation"
+    },
+    {
+      "id": "cell-wallet",
+      "url": "https://cellframe.net/",
+      "supports": "Native wallet and supported cryptography.",
+      "source_type": "project website"
+    },
+    {
+      "id": "q-faq",
+      "url": "https://quantumcoin.org/faq.html",
+      "supports": "Mainnet date, PoS and claimed signing components.",
+      "source_type": "project documentation"
+    },
+    {
+      "id": "q-signatures",
+      "url": "https://quantumcoin.org/quantum-resistance.html",
+      "supports": "Hybrid scheme descriptions.",
+      "source_type": "project documentation"
+    },
+    {
+      "id": "q-policy",
+      "url": "https://github.com/quantumcoinproject/quantum-coin-go/blob/a8952bb87e4d0bfe3c8d550662d0bcbbc40c2abd/crypto/cryptobase/cryptobase.go",
+      "supports": "Signing modes and protocol conditions.",
+      "source_type": "pinned source code"
+    },
+    {
+      "id": "q-config",
+      "url": "https://github.com/quantumcoinproject/quantum-coin-go/blob/a8952bb87e4d0bfe3c8d550662d0bcbbc40c2abd/defaults/config.go",
+      "supports": "Protocol activation thresholds.",
+      "source_type": "pinned source code"
+    },
+    {
+      "id": "qan-launch",
+      "url": "https://medium.com/qanplatform/qanplatform-launches-its-multi-language-quantum-resistant-testnet-d12269deec34",
+      "supports": "May 7, 2024 testnet announcement.",
+      "source_type": "project documentation"
+    },
+    {
+      "id": "qan-validation",
+      "url": "https://docs.qanplatform.com/testnet/validation",
+      "supports": "Current testnet PoA and future transition.",
+      "source_type": "project documentation"
+    },
+    {
+      "id": "qan-xlink",
+      "url": "https://docs.qanplatform.com/testnet/setup/qan-xlink/desktop-app",
+      "supports": "ML-DSA-65/secp256k1 pairing and testnet scope.",
+      "source_type": "project documentation"
+    },
+    {
+      "id": "npt-relaunch",
+      "url": "https://neptune.cash/articles/mainnet-relaunch",
+      "supports": "Mainnet relaunch history.",
+      "source_type": "project documentation"
+    },
+    {
+      "id": "npt-genesis",
+      "url": "https://explorer.neptune.cash/block/genesis",
+      "supports": "Current-chain genesis.",
+      "source_type": "project block explorer"
+    },
+    {
+      "id": "npt-mining",
+      "url": "https://docs.neptune.cash/consensus/mining.html",
+      "supports": "PoW consensus.",
+      "source_type": "project documentation"
+    },
+    {
+      "id": "npt-spending",
+      "url": "https://docs.neptune.cash/consensus/utxo.html",
+      "supports": "Spending conditions and proof scope.",
+      "source_type": "project documentation"
+    },
+    {
+      "id": "npt-lock",
+      "url": "https://github.com/Neptune-Crypto/neptune-core/blob/db304e79eb722b1c5654c9854360701af10f3749/neptune-consensus/src/transaction/lock_script.rs",
+      "supports": "Lock script interface at snapshot revision.",
+      "source_type": "pinned source code"
+    },
+    {
+      "id": "ckb-lock",
+      "url": "https://github.com/nervosnetwork/quantum-resistant-lock-script/tree/082c0a19ce4e0b2c0b00f7b46f423f59a30afc71",
+      "supports": "SPHINCS+ implementation and mainnet deployment parameters.",
+      "source_type": "pinned source repository"
+    },
+    {
+      "id": "ckb-consensus",
+      "url": "https://docs.nervos.org/docs/ckb-features/extreme-decentralization",
+      "supports": "PoW consensus.",
+      "source_type": "project documentation"
+    },
+    {
+      "id": "ckb-agility",
+      "url": "https://www.nervos.org/knowledge-base/blockchain_crypto_agility",
+      "supports": "Lock-script extensibility.",
+      "source_type": "project documentation"
+    },
+    {
+      "id": "ckb-genesis",
+      "url": "https://talk.nervos.org/t/nervos-ckb-lina/3857",
+      "supports": "2019 chain launch, distinct from lock deployment.",
+      "source_type": "project documentation"
+    },
+    {
+      "id": "quantus-launch",
+      "url": "https://www.quantus.com/blog/weekly-update-09-16-2026/",
+      "supports": "Mainnet launch date and signing progress.",
+      "source_type": "project documentation"
+    },
+    {
+      "id": "quantus-consensus",
+      "url": "https://www.quantus.com/whitepaper/",
+      "supports": "PoW consensus.",
+      "source_type": "project documentation"
+    },
+    {
+      "id": "quantus-runtime",
+      "url": "https://github.com/Quantus-Network/quantus-wasm/blob/04174ffca2e385ca64d45ee0c9523cc1dd36707d/README.md",
+      "supports": "ML-DSA parameter sets and spec 139 requirement.",
+      "source_type": "pinned source documentation"
+    },
+    {
+      "id": "xid-whitepaper",
+      "url": "https://xcoinproject.com/whitepaper",
+      "supports": "Genesis date, PoW and signing/fallback design.",
+      "source_type": "project documentation"
+    },
+    {
+      "id": "xid-explorer",
+      "url": "https://superknet.com/",
+      "supports": "Public chain activity; not proof of adoption.",
+      "source_type": "ecosystem block explorer"
+    },
+    {
+      "id": "qtc-readme",
+      "url": "https://github.com/qtcchain/qtc/tree/5adbc7d5c2ac252804fd3c61fce3b9bbc3ad9c24",
+      "supports": "Launch/re-genesis dates and PoW.",
+      "source_type": "pinned source repository"
+    },
+    {
+      "id": "qtc-spec",
+      "url": "https://github.com/qtcchain/qtc/blob/5adbc7d5c2ac252804fd3c61fce3b9bbc3ad9c24/doc/qtc-pqc-spec.md",
+      "supports": "Active and reserved schemes, fallback and multisig.",
+      "source_type": "pinned source documentation"
+    },
+    {
+      "id": "qtc-explorer",
+      "url": "https://qtc.events/blocks",
+      "supports": "Public block activity.",
+      "source_type": "ecosystem block explorer"
+    },
+    {
+      "id": "soq-foundation",
+      "url": "https://soqucoin.org/",
+      "supports": "Block 1 date, ML-DSA-44 and PoW.",
+      "source_type": "project foundation website"
+    },
+    {
+      "id": "soq-code",
+      "url": "https://github.com/soqucoin/soqucoin/tree/0b4d6ab18b687d658a42b8debef1d6db2c7b4aa0",
+      "supports": "Snapshot implementation and AuxPoW support.",
+      "source_type": "pinned source repository"
+    },
+    {
+      "id": "soq-explorer",
+      "url": "https://explorer.soqu.org/",
+      "supports": "Public block activity.",
+      "source_type": "project block explorer"
+    },
+    {
+      "id": "size-ed25519",
+      "url": "https://www.rfc-editor.org/rfc/rfc8032.html",
+      "supports": "Public-key/signature size and encoding for Ed25519.",
+      "source_type": "algorithm specification or reference implementation"
+    },
+    {
+      "id": "size-rsa",
+      "url": "https://www.rfc-editor.org/rfc/rfc8017.html",
+      "supports": "Public-key/signature size and encoding for RSA-2048.",
+      "source_type": "algorithm specification or reference implementation"
+    },
+    {
+      "id": "size-falcon512",
+      "url": "https://falcon-sign.info/impl/falcon.h.html",
+      "supports": "Public-key/signature size and encoding for Falcon-512.",
+      "source_type": "algorithm specification or reference implementation"
+    },
+    {
+      "id": "size-falcon1024",
+      "url": "https://falcon-sign.info/impl/falcon.h.html",
+      "supports": "Public-key/signature size and encoding for Falcon-1024.",
+      "source_type": "algorithm specification or reference implementation"
+    },
+    {
+      "id": "size-mldsa44",
+      "url": "https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.204.pdf",
+      "supports": "Public-key/signature size and encoding for ML-DSA-44.",
+      "source_type": "algorithm specification or reference implementation"
+    },
+    {
+      "id": "size-mldsa65",
+      "url": "https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.204.pdf",
+      "supports": "Public-key/signature size and encoding for ML-DSA-65.",
+      "source_type": "algorithm specification or reference implementation"
+    },
+    {
+      "id": "size-mldsa87",
+      "url": "https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.204.pdf",
+      "supports": "Public-key/signature size and encoding for ML-DSA-87.",
+      "source_type": "algorithm specification or reference implementation"
+    },
+    {
+      "id": "size-slh128s",
+      "url": "https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.205.pdf",
+      "supports": "Public-key/signature size and encoding for SLH-DSA-SHA2-128s.",
+      "source_type": "algorithm specification or reference implementation"
+    },
+    {
+      "id": "size-slh256s",
+      "url": "https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.205.pdf",
+      "supports": "Public-key/signature size and encoding for SLH-DSA-SHA2-256s.",
+      "source_type": "algorithm specification or reference implementation"
+    },
+    {
+      "id": "size-xmss",
+      "url": "https://www.rfc-editor.org/rfc/rfc8391.html",
+      "supports": "Public-key/signature size and encoding for XMSS-SHA2_10_256.",
+      "source_type": "algorithm specification or reference implementation"
+    },
+    {
+      "id": "size-uovc",
+      "url": "https://csrc.nist.gov/csrc/media/Projects/pqc-dig-sig/documents/UOV_Specification_R3.pdf",
+      "supports": "Public-key/signature size and encoding for UOV-Is, compact public key.",
+      "source_type": "algorithm specification or reference implementation"
+    },
+    {
+      "id": "size-uove",
+      "url": "https://csrc.nist.gov/csrc/media/Projects/pqc-dig-sig/documents/UOV_Specification_R3.pdf",
+      "supports": "Public-key/signature size and encoding for UOV-Is, expanded public key.",
+      "source_type": "algorithm specification or reference implementation"
+    },
+    {
+      "id": "nist-additional",
+      "url": "https://csrc.nist.gov/projects/pqc-dig-sig/round-3-additional-signatures",
+      "supports": "UOV is an additional digital signatures Round 3 candidate.",
+      "source_type": "standards body"
+    },
+    {
+      "id": "nist-hqc",
+      "url": "https://csrc.nist.gov/News/2025/hqc-announced-as-a-4th-round-selection",
+      "supports": "HQC is the original PQC Round 4 KEM selection, not a signature.",
+      "source_type": "standards body"
+    },
+    {
+      "id": "nist-fndsa",
+      "url": "https://groups.google.com/a/list.nist.gov/g/pqc-forum/c/7z-y5qp-W2Y/m/a11CmUsuBQAJ",
+      "supports": "NIST team update on FN-DSA standard development, September 2026.",
+      "source_type": "standards body forum update"
+    },
+    {
+      "id": "sec-submission",
+      "url": "https://www.sec.gov/files/cft-written-input-daniel-bruno-corvelo-costa-090325.pdf",
+      "supports": "Third-party PQFIF submission, Appendix A pages 62 and 69; conceptual application examples, not SEC policy or engineering validation.",
+      "source_type": "third-party submission hosted by SEC"
+    }
+  ]
+}

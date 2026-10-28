@@ -1,0 +1,24 @@
+name: Suggest a project
+description: Suggest a project with public technical evidence.
+title: "Project: "
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Project name and ticker
+    validations:
+      required: true
+  - type: textarea
+    id: facts
+    attributes:
+      label: What has been deployed?
+      description: Include the network, consensus, milestone, scheme and protection scope.
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Primary sources and limits
+      description: Link technical evidence and describe remaining classical dependencies or conditions.
+    validations:
+      required: true

@@ -1,0 +1,176 @@
+{
+  "schema_version": "1.0",
+  "snapshot_date": "2026-10-23",
+  "unit": "bytes",
+  "scope": "Reference algorithm encodings, not complete blockchain transactions",
+  "parameters": [
+    {
+      "id": "ed25519",
+      "name": "Ed25519",
+      "family": "classical",
+      "public_key_bytes": 32,
+      "signature_bytes": 64,
+      "nist_category": null,
+      "encoding": "Raw key and signature; RFC 8032",
+      "status_note": "Classical reference; not post-quantum",
+      "shown_in_published_chart": true,
+      "sources": [
+        "size-ed25519"
+      ]
+    },
+    {
+      "id": "rsa",
+      "name": "RSA-2048",
+      "family": "classical",
+      "public_key_bytes": 270,
+      "signature_bytes": 256,
+      "nist_category": null,
+      "encoding": "PKCS #1 DER public key, e=65537; 256-byte signature",
+      "status_note": "Classical reference; not post-quantum",
+      "shown_in_published_chart": true,
+      "sources": [
+        "size-rsa"
+      ]
+    },
+    {
+      "id": "falcon512",
+      "name": "Falcon-512",
+      "family": "lattice-based",
+      "public_key_bytes": 897,
+      "signature_bytes": 666,
+      "nist_category": 1,
+      "encoding": "Padded signature encoding",
+      "status_note": "NIST-selected Falcon; do not equate a project implementation with a final FN-DSA standard",
+      "shown_in_published_chart": true,
+      "sources": [
+        "size-falcon512"
+      ]
+    },
+    {
+      "id": "falcon1024",
+      "name": "Falcon-1024",
+      "family": "lattice-based",
+      "public_key_bytes": 1793,
+      "signature_bytes": 1280,
+      "nist_category": 5,
+      "encoding": "Padded signature encoding",
+      "status_note": "NIST-selected Falcon; do not equate a project implementation with a final FN-DSA standard",
+      "shown_in_published_chart": false,
+      "sources": [
+        "size-falcon1024"
+      ]
+    },
+    {
+      "id": "mldsa44",
+      "name": "ML-DSA-44",
+      "family": "lattice-based",
+      "public_key_bytes": 1312,
+      "signature_bytes": 2420,
+      "nist_category": 2,
+      "encoding": "FIPS 204",
+      "status_note": "Final standard",
+      "shown_in_published_chart": true,
+      "sources": [
+        "size-mldsa44"
+      ]
+    },
+    {
+      "id": "mldsa65",
+      "name": "ML-DSA-65",
+      "family": "lattice-based",
+      "public_key_bytes": 1952,
+      "signature_bytes": 3309,
+      "nist_category": 3,
+      "encoding": "FIPS 204",
+      "status_note": "Final standard",
+      "shown_in_published_chart": false,
+      "sources": [
+        "size-mldsa65"
+      ]
+    },
+    {
+      "id": "mldsa87",
+      "name": "ML-DSA-87",
+      "family": "lattice-based",
+      "public_key_bytes": 2592,
+      "signature_bytes": 4627,
+      "nist_category": 5,
+      "encoding": "FIPS 204",
+      "status_note": "Final standard",
+      "shown_in_published_chart": false,
+      "sources": [
+        "size-mldsa87"
+      ]
+    },
+    {
+      "id": "slh128s",
+      "name": "SLH-DSA-SHA2-128s",
+      "family": "hash-based",
+      "public_key_bytes": 32,
+      "signature_bytes": 7856,
+      "nist_category": 1,
+      "encoding": "FIPS 205; SHAKE-128s has the same sizes",
+      "status_note": "Final standard",
+      "shown_in_published_chart": true,
+      "sources": [
+        "size-slh128s"
+      ]
+    },
+    {
+      "id": "slh256s",
+      "name": "SLH-DSA-SHA2-256s",
+      "family": "hash-based",
+      "public_key_bytes": 64,
+      "signature_bytes": 29792,
+      "nist_category": 5,
+      "encoding": "FIPS 205; SHAKE-256s has the same sizes",
+      "status_note": "Final standard",
+      "shown_in_published_chart": false,
+      "sources": [
+        "size-slh256s"
+      ]
+    },
+    {
+      "id": "xmss",
+      "name": "XMSS-SHA2_10_256",
+      "family": "hash-based",
+      "public_key_bytes": 68,
+      "signature_bytes": 2500,
+      "nist_category": null,
+      "encoding": "RFC 8391 format; public key includes a 4-byte OID",
+      "status_note": "RFC example; not a QRL transaction-size measurement",
+      "shown_in_published_chart": true,
+      "sources": [
+        "size-xmss"
+      ]
+    },
+    {
+      "id": "uovc",
+      "name": "UOV-Is, compact public key",
+      "family": "multivariate",
+      "public_key_bytes": 66576,
+      "signature_bytes": 96,
+      "nist_category": 1,
+      "encoding": "UOV Round 3 specification v3.0; compact public key",
+      "status_note": "Additional digital signatures Round 3 candidate; target category; not Raqcoin deployment parameters",
+      "shown_in_published_chart": true,
+      "sources": [
+        "size-uovc"
+      ]
+    },
+    {
+      "id": "uove",
+      "name": "UOV-Is, expanded public key",
+      "family": "multivariate",
+      "public_key_bytes": 412160,
+      "signature_bytes": 96,
+      "nist_category": 1,
+      "encoding": "UOV Round 3 specification v3.0; expanded public key",
+      "status_note": "Same parameter set as the compact point; not a different security level",
+      "shown_in_published_chart": true,
+      "sources": [
+        "size-uove"
+      ]
+    }
+  ]
+}

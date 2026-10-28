@@ -1,0 +1,20 @@
+License notice
+
+Copyright (c) 2026 Balance Zhao
+
+Original data compilation, charts and prose in this repository are licensed
+under Creative Commons Attribution 4.0 International (CC BY 4.0).
+Full terms: LICENSES/CC-BY-4.0.txt
+Canonical license: https://creativecommons.org/licenses/by/4.0/
+
+Original scripts in scripts/ and workflow configuration in .github/ are
+licensed under the MIT License in LICENSES/MIT.txt.
+
+These grants apply only to material the contributor has the right to license.
+Third-party specifications, source code, documents, trademarks and other
+linked material retain their original rights. Merely citing a source does
+not relicense it. No exclusive right is asserted over individual public facts.
+
+Suggested credit: Post-Quantum Crypto Map, maintained by Balance Zhao
+(@balance0014), https://github.com/Balance0014/post-quantum-crypto-map
+Include the snapshot date and indicate any changes.

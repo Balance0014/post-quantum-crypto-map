@@ -1,0 +1,13 @@
+id,name,family,public_key_bytes,signature_bytes,nist_category,encoding,status_note,shown_in_published_chart,source_url
+ed25519,Ed25519,classical,32,64,,Raw key and signature; RFC 8032,Classical reference; not post-quantum,True,https://www.rfc-editor.org/rfc/rfc8032.html
+rsa,RSA-2048,classical,270,256,,"PKCS #1 DER public key, e=65537; 256-byte signature",Classical reference; not post-quantum,True,https://www.rfc-editor.org/rfc/rfc8017.html
+falcon512,Falcon-512,lattice-based,897,666,1,Padded signature encoding,NIST-selected Falcon; do not equate a project implementation with a final FN-DSA standard,True,https://falcon-sign.info/impl/falcon.h.html
+falcon1024,Falcon-1024,lattice-based,1793,1280,5,Padded signature encoding,NIST-selected Falcon; do not equate a project implementation with a final FN-DSA standard,False,https://falcon-sign.info/impl/falcon.h.html
+mldsa44,ML-DSA-44,lattice-based,1312,2420,2,FIPS 204,Final standard,True,https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.204.pdf
+mldsa65,ML-DSA-65,lattice-based,1952,3309,3,FIPS 204,Final standard,False,https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.204.pdf
+mldsa87,ML-DSA-87,lattice-based,2592,4627,5,FIPS 204,Final standard,False,https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.204.pdf
+slh128s,SLH-DSA-SHA2-128s,hash-based,32,7856,1,FIPS 205; SHAKE-128s has the same sizes,Final standard,True,https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.205.pdf
+slh256s,SLH-DSA-SHA2-256s,hash-based,64,29792,5,FIPS 205; SHAKE-256s has the same sizes,Final standard,False,https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.205.pdf
+xmss,XMSS-SHA2_10_256,hash-based,68,2500,,RFC 8391 format; public key includes a 4-byte OID,RFC example; not a QRL transaction-size measurement,True,https://www.rfc-editor.org/rfc/rfc8391.html
+uovc,"UOV-Is, compact public key",multivariate,66576,96,1,UOV Round 3 specification v3.0; compact public key,Additional digital signatures Round 3 candidate; target category; not Raqcoin deployment parameters,True,https://csrc.nist.gov/csrc/media/Projects/pqc-dig-sig/documents/UOV_Specification_R3.pdf
+uove,"UOV-Is, expanded public key",multivariate,412160,96,1,UOV Round 3 specification v3.0; expanded public key,Same parameter set as the compact point; not a different security level,True,https://csrc.nist.gov/csrc/media/Projects/pqc-dig-sig/documents/UOV_Specification_R3.pdf

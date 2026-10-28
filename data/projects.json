@@ -1,0 +1,560 @@
+{
+  "schema_version": "1.0",
+  "snapshot_date": "2026-10-23",
+  "projects": [
+    {
+      "id": "raqcoin",
+      "name": "Raqcoin",
+      "ticker": "RAQ",
+      "network_status": "mainnet",
+      "consensus": "PoW",
+      "timeline_year": 2018,
+      "timeline_milestone": "Jun · ABCMint genesis",
+      "chart_cryptography": "RainbowPro / UOV; multisig",
+      "chart_agility": "Agility: multiple signature schemes",
+      "chart_note": "Renamed in 2022; old Rainbow parameters broken",
+      "crypto_uses": [
+        {
+          "scheme": "RainbowPro / UOV",
+          "family": "multivariate",
+          "scope": "configuration-dependent"
+        }
+      ],
+      "last_reviewed": "2026-10-23",
+      "milestone_note": "The 2018 milestone is ABCMint genesis, not UOV deployment. Community materials describe a 2022 rename.",
+      "consensus_note": "PoW.",
+      "signing_note": "RainbowPro and UOV configurations; multisig is a separate capability.",
+      "agility_note": "Key configuration selects the signing scheme. Existing keys do not change automatically.",
+      "caveat": "The guide lists Rainbow configuration 274 as the default. Legacy ABCMint Rainbow parameters have a public break. New configurations require separate analysis; NIST UOV candidate parameters are not Raqcoin deployment parameters.",
+      "sources": [
+        "raq-info",
+        "raq-guide",
+        "raq-multisig",
+        "raq-legacy-break",
+        "raq-history"
+      ]
+    },
+    {
+      "id": "mochimo",
+      "name": "Mochimo",
+      "ticker": "MCM",
+      "network_status": "mainnet",
+      "consensus": "PoS",
+      "timeline_year": 2018,
+      "timeline_milestone": "Jun · Mainnet launch",
+      "chart_cryptography": "WOTS+ transaction signatures",
+      "chart_agility": "Agility: WOTS+ only today",
+      "chart_note": "Switched from PoW to PoS in Oct 2026",
+      "crypto_uses": [
+        {
+          "scheme": "WOTS+",
+          "family": "hash-based",
+          "scope": "transaction signing"
+        }
+      ],
+      "last_reviewed": "2026-10-23",
+      "milestone_note": "Mainnet launched in June 2018.",
+      "consensus_note": "PoS after the October 2026 migration; historically PoW.",
+      "signing_note": "WOTS+ transaction signatures.",
+      "agility_note": "One active signing scheme in the reviewed material.",
+      "caveat": "Consensus changed; the signing scheme remained WOTS+. No claim that a future protocol upgrade could never change it.",
+      "sources": [
+        "mcm-home",
+        "mcm-explorer",
+        "mcm-code"
+      ]
+    },
+    {
+      "id": "qrl",
+      "name": "QRL",
+      "ticker": "QRL",
+      "network_status": "mainnet",
+      "consensus": "PoW",
+      "timeline_year": 2018,
+      "timeline_milestone": "Jun · Mainnet launch",
+      "chart_cryptography": "XMSS transaction signatures",
+      "chart_agility": "Agility: hash choice; descriptor extensions",
+      "chart_note": "1.x mainnet: PoW; 2.0 PoS: testnet",
+      "crypto_uses": [
+        {
+          "scheme": "XMSS",
+          "family": "hash-based",
+          "scope": "transaction signing"
+        }
+      ],
+      "last_reviewed": "2026-10-23",
+      "milestone_note": "Mainnet launched in June 2018.",
+      "consensus_note": "QRL 1.x mainnet uses PoW; QRL 2.0 PoS was a testnet in this snapshot.",
+      "signing_note": "XMSS transaction signatures.",
+      "agility_note": "Hash-function choice and descriptor fields; not arbitrary switching between signature families.",
+      "caveat": "XMSS is stateful. The RFC size example is not QRL transaction serialization.",
+      "sources": [
+        "qrl-history",
+        "qrl-status",
+        "qrl-xmss",
+        "qrl-address"
+      ]
+    },
+    {
+      "id": "nexus",
+      "name": "Nexus",
+      "ticker": "NXS",
+      "network_status": "mainnet",
+      "consensus": "PoW + PoS",
+      "timeline_year": 2019,
+      "timeline_milestone": "Nov · Tritium mainnet upgrade",
+      "chart_cryptography": "Opt-in Falcon-512; Brainpool also valid",
+      "chart_agility": "Agility: signature-chain key / scheme rotation",
+      "chart_note": "Falcon is optional; Brainpool remains classical",
+      "crypto_uses": [
+        {
+          "scheme": "Falcon-512",
+          "family": "lattice-based",
+          "scope": "opt-in authorization"
+        }
+      ],
+      "last_reviewed": "2026-10-23",
+      "milestone_note": "November 2019 is the Tritium upgrade, not the original chain genesis in 2014.",
+      "consensus_note": "PoW and PoS channels.",
+      "signing_note": "Opt-in Falcon-512; classical Brainpool signatures remain valid.",
+      "agility_note": "Signature chains commit to a subsequent key and scheme.",
+      "caveat": "Do not treat every Nexus account as post-quantum.",
+      "sources": [
+        "nxs-history",
+        "nxs-release",
+        "nxs-activation",
+        "nxs-explorer",
+        "nxs-signing",
+        "nxs-falcon"
+      ]
+    },
+    {
+      "id": "tidecoin",
+      "name": "Tidecoin",
+      "ticker": "TDC",
+      "network_status": "mainnet",
+      "consensus": "PoW",
+      "timeline_year": 2020,
+      "timeline_milestone": "Dec · Mainnet launch",
+      "chart_cryptography": "Falcon-512 live; ML-DSA in upgrade code",
+      "chart_agility": "Agility: upgrade-gated scheme support",
+      "chart_note": "Multi-scheme upgrade not active on mainnet",
+      "crypto_uses": [
+        {
+          "scheme": "Falcon-512",
+          "family": "lattice-based",
+          "scope": "mainnet transaction signing"
+        }
+      ],
+      "last_reviewed": "2026-10-23",
+      "milestone_note": "Genesis was December 27, 2020.",
+      "consensus_note": "PoW; the reviewed default mainnet parameters disable the AuxPoW activation gate.",
+      "signing_note": "Falcon-512 active; Falcon-1024 and ML-DSA exist in upgrade code.",
+      "agility_note": "Multiple schemes are implemented behind an activation gate.",
+      "caveat": "Implemented upgrade support does not establish that it is active on mainnet.",
+      "sources": [
+        "tdc-readme",
+        "tdc-activation",
+        "tdc-validation"
+      ]
+    },
+    {
+      "id": "starknet",
+      "name": "Starknet",
+      "ticker": "STRK",
+      "network_status": "mainnet",
+      "consensus": "L2 · PoS rollout",
+      "timeline_year": 2021,
+      "timeline_milestone": "Nov · L2 Mainnet Alpha",
+      "chart_cryptography": "STARK proofs; Falcon-512 account demo",
+      "chart_agility": "Agility: account abstraction / contract upgrades",
+      "chart_note": "Independent L1: research proposal stage",
+      "crypto_uses": [
+        {
+          "scheme": "Falcon-512",
+          "family": "lattice-based",
+          "scope": "account demonstration"
+        },
+        {
+          "scheme": "STARK",
+          "family": "hash-based",
+          "scope": "validity proofs"
+        }
+      ],
+      "last_reviewed": "2026-10-23",
+      "milestone_note": "November 2021 is L2 Mainnet Alpha, not an independent L1 launch.",
+      "consensus_note": "Ethereum L2 with a phased PoS rollout.",
+      "signing_note": "STARK validity proofs and a Falcon-512 account demonstration.",
+      "agility_note": "Account abstraction and contract upgrades can change account verification logic.",
+      "caveat": "A Falcon account demo is not migration of every account. Ethereum settlement and bridge dependencies remain. The L1 vote supported research, not a move.",
+      "sources": [
+        "strk-launch",
+        "strk-account",
+        "strk-staking",
+        "strk-vote",
+        "strk-scope"
+      ]
+    },
+    {
+      "id": "abelian",
+      "name": "Abelian",
+      "ticker": "ABEL",
+      "network_status": "mainnet",
+      "consensus": "Dual PoW",
+      "timeline_year": 2022,
+      "timeline_milestone": "Apr · Mainnet launch",
+      "chart_cryptography": "PQRingCT / PQRingCTX lattice schemes",
+      "chart_agility": "Agility: versioned cryptographic schemes",
+      "chart_note": "Jan 2026: ABEL-ETHash + ABEL-Nakamoto",
+      "crypto_uses": [
+        {
+          "scheme": "PQRingCT / PQRingCTX",
+          "family": "lattice-based",
+          "scope": "custom transaction authorization"
+        }
+      ],
+      "last_reviewed": "2026-10-23",
+      "milestone_note": "Mainnet launched in April 2022.",
+      "consensus_note": "Dual PoW: ABEL-ETHash and ABEL-Nakamoto after the Aconcagua upgrade.",
+      "signing_note": "Custom lattice-based PQRingCT/PQRingCTX schemes.",
+      "agility_note": "Versioned cryptographic schemes; mining algorithm choice is a separate matter.",
+      "caveat": "These schemes are not ML-DSA. Dual PoW does not mean PoW plus PoS. QDay is a separate L2.",
+      "sources": [
+        "abel-launch",
+        "abel-upgrade",
+        "abel-consensus",
+        "abel-schemes"
+      ]
+    },
+    {
+      "id": "algorand",
+      "name": "Algorand",
+      "ticker": "ALGO",
+      "network_status": "mainnet",
+      "consensus": "PoS",
+      "timeline_year": 2022,
+      "timeline_milestone": "State Proofs deployed on mainnet",
+      "chart_cryptography": "Opt-in Falcon accounts; State Proofs",
+      "chart_agility": "Agility: rekeying / programmable authorization",
+      "chart_note": "Chain launched in 2019; consensus still classical",
+      "crypto_uses": [
+        {
+          "scheme": "Falcon",
+          "family": "lattice-based",
+          "scope": "opt-in accounts and State Proofs"
+        }
+      ],
+      "last_reviewed": "2026-10-23",
+      "milestone_note": "The timeline uses the 2022 State Proofs milestone. The chain launched in 2019.",
+      "consensus_note": "Pure Proof of Stake.",
+      "signing_note": "Falcon State Proofs and opt-in Falcon account authorization.",
+      "agility_note": "Rekeying and programmable authorization; native Falcon-1024 accounts are also documented.",
+      "caveat": "State Proofs and account signing have different roles. Consensus participation keys remain classical; app and wallet support still matters.",
+      "sources": [
+        "algo-pq",
+        "algo-account",
+        "algo-rekey",
+        "algo-consensus"
+      ]
+    },
+    {
+      "id": "cellframe",
+      "name": "Cellframe",
+      "ticker": "CELL",
+      "network_status": "mainnet",
+      "consensus": "PoS + PoA",
+      "timeline_year": 2023,
+      "timeline_milestone": "Jul · Native mainnet launch",
+      "chart_cryptography": "Dilithium / Falcon / SPHINCS+",
+      "chart_agility": "Agility: multiple native signing schemes",
+      "chart_note": "Main chain: PoS; zerochain: PoA · CF-20 only",
+      "crypto_uses": [
+        {
+          "scheme": "Dilithium / Falcon",
+          "family": "lattice-based",
+          "scope": "native wallet options"
+        },
+        {
+          "scheme": "SPHINCS+",
+          "family": "hash-based",
+          "scope": "native wallet option"
+        }
+      ],
+      "last_reviewed": "2026-10-23",
+      "milestone_note": "Native mainnet launched in July 2023.",
+      "consensus_note": "PoS on the main transaction chain; PoA on the zerochain.",
+      "signing_note": "Native-wallet options include Dilithium, Falcon and SPHINCS+.",
+      "agility_note": "Multiple native signing schemes, subject to network and wallet support.",
+      "caveat": "Scope is native CF-20 assets, not ERC-20/BEP-20 tokens. Picnic is a historical/deprecated route, not a current wallet option in this release.",
+      "sources": [
+        "cell-launch",
+        "cell-consensus",
+        "cell-assets",
+        "cell-wallet"
+      ]
+    },
+    {
+      "id": "quantumcoin",
+      "name": "QuantumCoin",
+      "ticker": "Q",
+      "network_status": "mainnet",
+      "consensus": "PoS",
+      "timeline_year": 2023,
+      "timeline_milestone": "Dec · Mainnet launch",
+      "chart_cryptography": "Hybrid PQ + Ed25519 signatures",
+      "chart_agility": "Agility: protocol switching / emergency mode",
+      "chart_note": "Signing modes activate at protocol thresholds",
+      "crypto_uses": [
+        {
+          "scheme": "ML-DSA",
+          "family": "lattice-based",
+          "scope": "hybrid component; protocol-dependent"
+        },
+        {
+          "scheme": "SLH-DSA",
+          "family": "hash-based",
+          "scope": "hybrid/emergency component; protocol-dependent"
+        }
+      ],
+      "last_reviewed": "2026-10-23",
+      "milestone_note": "Mainnet launched on December 31, 2023.",
+      "consensus_note": "PoS with deposit-weighted BFT.",
+      "signing_note": "Hybrid post-quantum and Ed25519 signing; ML-DSA and SLH-DSA components.",
+      "agility_note": "Signing modes change at protocol thresholds and in emergency mode.",
+      "caveat": "Do not assume every protocol phase uses exactly the same component combination. ML-KEM node handshakes are not transaction signatures.",
+      "sources": [
+        "q-faq",
+        "q-signatures",
+        "q-policy",
+        "q-config"
+      ]
+    },
+    {
+      "id": "qanplatform",
+      "name": "QANplatform",
+      "ticker": "QANX",
+      "network_status": "testnet",
+      "consensus": "PoA · Testnet",
+      "timeline_year": 2024,
+      "timeline_milestone": "May · Public testnet launch announced",
+      "chart_cryptography": "ML-DSA-65; XLINK links to secp256k1",
+      "chart_agility": "Agility: fixed XLINK signature pairing",
+      "chart_note": "Testnet uses PoA; transition to PoS is planned",
+      "crypto_uses": [
+        {
+          "scheme": "ML-DSA-65",
+          "family": "lattice-based",
+          "scope": "XLINK testnet pairing with secp256k1"
+        }
+      ],
+      "last_reviewed": "2026-10-23",
+      "milestone_note": "May 2024 is the public testnet announcement, not a public mainnet launch.",
+      "consensus_note": "PoA on the reviewed public testnet; PoS is planned.",
+      "signing_note": "XLINK pairs ML-DSA-65 with secp256k1.",
+      "agility_note": "A fixed signature pairing in the reviewed XLINK path.",
+      "caveat": "The traded QANX token does not establish a live native post-quantum mainnet. The original 2024 announcement used the Dilithium name; do not backdate current parameters.",
+      "sources": [
+        "qan-launch",
+        "qan-validation",
+        "qan-xlink"
+      ]
+    },
+    {
+      "id": "neptune-cash",
+      "name": "Neptune Cash",
+      "ticker": "NPT",
+      "network_status": "mainnet",
+      "consensus": "PoW",
+      "timeline_year": 2025,
+      "timeline_milestone": "Feb · First launch; Aug · Relaunch",
+      "chart_cryptography": "Hash-based spending; STARK proofs",
+      "chart_agility": "Agility: programmable lock scripts",
+      "chart_note": "Current chain relaunched on Aug 5",
+      "crypto_uses": [
+        {
+          "scheme": "Hash preimages",
+          "family": "hash-based",
+          "scope": "spending conditions"
+        },
+        {
+          "scheme": "Triton STARK",
+          "family": "hash-based",
+          "scope": "validity proofs"
+        }
+      ],
+      "last_reviewed": "2026-10-23",
+      "milestone_note": "First launch in February 2025; the current chain relaunched on August 5, 2025.",
+      "consensus_note": "PoW.",
+      "signing_note": "Hash-preimage spending conditions and Triton STARK validity proofs.",
+      "agility_note": "Programmable lock scripts.",
+      "caveat": "A STARK proof and a hash-preimage spending condition are not a fixed-size standard digital signature.",
+      "sources": [
+        "npt-relaunch",
+        "npt-genesis",
+        "npt-mining",
+        "npt-spending",
+        "npt-lock"
+      ]
+    },
+    {
+      "id": "nervos-ckb",
+      "name": "Nervos CKB",
+      "ticker": "CKB",
+      "network_status": "mainnet",
+      "consensus": "PoW",
+      "timeline_year": 2026,
+      "timeline_milestone": "Jan · SPHINCS+ lock deployed on mainnet",
+      "chart_cryptography": "Opt-in SPHINCS+ lock script",
+      "chart_agility": "Agility: deployable lock scripts",
+      "chart_note": "Chain launched in 2019; existing funds must migrate",
+      "crypto_uses": [
+        {
+          "scheme": "SPHINCS+",
+          "family": "hash-based",
+          "scope": "opt-in spending lock"
+        }
+      ],
+      "last_reviewed": "2026-10-23",
+      "milestone_note": "January 2026 marks the SPHINCS+ lock deployment. CKB mainnet launched in 2019.",
+      "consensus_note": "PoW, using NC-Max and Eaglesong.",
+      "signing_note": "An opt-in SPHINCS+ spending lock.",
+      "agility_note": "New verification logic can be deployed as lock scripts.",
+      "caveat": "Existing cells must satisfy their old spending rules before migration. Default secp256k1 cells do not change automatically.",
+      "sources": [
+        "ckb-lock",
+        "ckb-consensus",
+        "ckb-agility",
+        "ckb-genesis"
+      ]
+    },
+    {
+      "id": "quantus",
+      "name": "Quantus",
+      "ticker": "QTC",
+      "network_status": "mainnet",
+      "consensus": "PoW",
+      "timeline_year": 2026,
+      "timeline_milestone": "Sep 9 · Mainnet launch",
+      "chart_cryptography": "ML-DSA-87 / ML-DSA-65 signatures",
+      "chart_agility": "Agility: parameter-set selection",
+      "chart_note": "ML-DSA-65 requires runtime spec 139+",
+      "crypto_uses": [
+        {
+          "scheme": "ML-DSA-87 / ML-DSA-65",
+          "family": "lattice-based",
+          "scope": "transaction signing; runtime conditions apply"
+        }
+      ],
+      "last_reviewed": "2026-10-23",
+      "milestone_note": "Mainnet launched on September 9, 2026.",
+      "consensus_note": "PoW with Poseidon2 mining.",
+      "signing_note": "ML-DSA-87 and ML-DSA-65 transaction signing.",
+      "agility_note": "Parameter-set selection within ML-DSA.",
+      "caveat": "ML-DSA-65 requires runtime spec 139 or later and compatible account tooling. Quantus and qtcchain both use QTC but are separate chains.",
+      "sources": [
+        "quantus-launch",
+        "quantus-consensus",
+        "quantus-runtime"
+      ]
+    },
+    {
+      "id": "xcoin",
+      "name": "xCoin",
+      "ticker": "XID",
+      "network_status": "mainnet",
+      "consensus": "PoW",
+      "timeline_year": 2026,
+      "timeline_milestone": "Sep 26 · Mainnet launch",
+      "chart_cryptography": "ML-DSA-65; SLH-DSA fallback",
+      "chart_agility": "Agility: precommitted fallback leaves",
+      "chart_note": "Fallback key must be in the spending tree",
+      "crypto_uses": [
+        {
+          "scheme": "ML-DSA-65",
+          "family": "lattice-based",
+          "scope": "primary signing"
+        },
+        {
+          "scheme": "SLH-DSA-SHA2-128s",
+          "family": "hash-based",
+          "scope": "precommitted fallback"
+        }
+      ],
+      "last_reviewed": "2026-10-23",
+      "milestone_note": "The project whitepaper dates mainnet genesis to September 26, 2026.",
+      "consensus_note": "PoW, using MetalDAG.",
+      "signing_note": "ML-DSA-65 primary signing; SLH-DSA-SHA2-128s fallback leaves.",
+      "agility_note": "Cross-family fallback requires committing to the alternative spending leaf in advance.",
+      "caveat": "This is not a claim that every spend carries both signatures or that a new fallback can be added after a key is compromised.",
+      "sources": [
+        "xid-whitepaper",
+        "xid-explorer"
+      ]
+    },
+    {
+      "id": "qtcchain",
+      "name": "qtcchain",
+      "ticker": "QTC",
+      "network_status": "mainnet",
+      "consensus": "PoW",
+      "timeline_year": 2026,
+      "timeline_milestone": "Sep 30 · v1 mainnet launch",
+      "chart_cryptography": "ML-DSA-44; SLH-DSA fallback",
+      "chart_agility": "Agility: multi-scheme script leaves",
+      "chart_note": "Oct 5 v2 re-genesis; unrelated to Quantus",
+      "crypto_uses": [
+        {
+          "scheme": "ML-DSA-44",
+          "family": "lattice-based",
+          "scope": "primary signing"
+        },
+        {
+          "scheme": "SLH-DSA",
+          "family": "hash-based",
+          "scope": "fallback/multisig"
+        }
+      ],
+      "last_reviewed": "2026-10-23",
+      "milestone_note": "v1 launched September 30, 2026; v2 re-genesis was October 5, 2026.",
+      "consensus_note": "PoW with MatMul mining.",
+      "signing_note": "ML-DSA-44 primary signing; SLH-DSA fallback/multisig.",
+      "agility_note": "Per-key scheme selection and multiple script leaves.",
+      "caveat": "Falcon is reserved in the reviewed specification. qtcchain is unrelated to Quantus despite the shared QTC ticker. The repository records a v2 treasury allocation; inclusion is not a fair-launch endorsement.",
+      "sources": [
+        "qtc-readme",
+        "qtc-spec",
+        "qtc-explorer"
+      ]
+    },
+    {
+      "id": "soqucoin",
+      "name": "Soqucoin",
+      "ticker": "SOQ",
+      "network_status": "mainnet",
+      "consensus": "PoW",
+      "timeline_year": 2026,
+      "timeline_milestone": "Oct 13 · Mainnet launch",
+      "chart_cryptography": "ML-DSA-44 transaction signatures",
+      "chart_agility": "Agility: one active signing scheme",
+      "chart_note": "Scrypt PoW with AuxPoW support",
+      "crypto_uses": [
+        {
+          "scheme": "ML-DSA-44",
+          "family": "lattice-based",
+          "scope": "transaction signing"
+        }
+      ],
+      "last_reviewed": "2026-10-23",
+      "milestone_note": "Mainnet block 1 was mined on October 13, 2026.",
+      "consensus_note": "Scrypt PoW with AuxPoW support.",
+      "signing_note": "ML-DSA-44 transaction signing.",
+      "agility_note": "One active transaction-signing scheme in the snapshot.",
+      "caveat": "XMSS experiments are not counted as a mainnet signing path. Public blocks do not establish user adoption or independent security certification.",
+      "sources": [
+        "soq-foundation",
+        "soq-code",
+        "soq-explorer"
+      ]
+    }
+  ]
+}

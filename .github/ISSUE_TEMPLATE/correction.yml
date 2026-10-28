@@ -1,0 +1,31 @@
+name: Correct a claim
+description: Report an incorrect or outdated detail with sources.
+title: "Correction: "
+body:
+  - type: input
+    id: project
+    attributes:
+      label: Project or algorithm
+    validations:
+      required: true
+  - type: textarea
+    id: claim
+    attributes:
+      label: What should change?
+      description: Quote the specific claim and explain the correction.
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Primary sources
+      description: Link the relevant specification, release, deployment or pinned code.
+    validations:
+      required: true
+  - type: input
+    id: scope
+    attributes:
+      label: Network, version and date
+      description: Identify mainnet, testnet, demo, opt-in feature or planned upgrade.
+    validations:
+      required: true
