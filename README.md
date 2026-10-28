@@ -1,72 +1,64 @@
 # Post-Quantum Crypto Map
 
-Compare where crypto projects use post-quantum cryptography: transaction signing, optional accounts, spending locks and validity proofs.
+**Which blockchains actually use post-quantum signatures, and where.** 17 projects, every claim linked to a source.
 
-**[Browse the projects](docs/projects.md)** · **[Compare signature sizes](docs/signature-sizes.md)** · **[Download CSV](data/projects.csv)** · **[Report a correction](https://github.com/Balance0014/post-quantum-crypto-map/issues/new/choose)**
+[Browse the projects](docs/projects.md) · [Compare signature sizes](docs/signature-sizes.md) · [Download CSV](data/projects.csv) · [Report a correction](https://github.com/Balance0014/post-quantum-crypto-map/issues/new/choose) · [中文](README.zh-CN.md)
 
-The dataset covers 17 projects, with deployment milestones, consensus mechanisms, signing schemes, upgrade options and source links. It grew out of two maps I published on X. I'm opening the data so people can check the claims, reuse the work and help keep it accurate.
+As of October 23, 2026:
 
-**Snapshot: October 23, 2026. First open-data release: October 28, 2026.** These are the data behind the dated charts below. [Release-day checks](docs/release-review.md) are listed separately; this is not a live feed or a security ranking.
+- **12 of the 17** use a post-quantum scheme on their default transaction path.
+- **4** offer it only as an opt-in account, lock or demo: Nexus, Starknet, Algorand and Nervos CKB.
+- **1** is testnet-only: QANplatform.
 
-Maintained by **Balance Zhao · [@balance0014](https://x.com/balance0014)**. [中文说明](README.zh-CN.md)
+It started as two maps I posted on [X](https://x.com/balance0014). This is the data behind them, so you can check my work and tell me what I got wrong. The data is a snapshot from the day the charts went up; I published it on October 28 after [a few re-checks](docs/release-review.md). It isn't a live feed or a security ranking.
 
-## Start here
-
-| If you want to… | Open… |
-| --- | --- |
-| See what each project has deployed, and what remains optional or experimental | [Project comparison](docs/projects.md) |
-| Check a claim against its source | The source links under each [project entry](docs/projects.md) |
-| Compare public-key and signature sizes | [Reference sizes and encoding notes](docs/signature-sizes.md) |
-| Build your own table or visualization | [Projects JSON](data/projects.json), [sizes JSON](data/signature-sizes.json), or the CSV files in [data/](data/) |
-| Add a project or correct a detail | [Contribution guide](CONTRIBUTING.md) |
+Maintained by Balance Zhao ([@balance0014](https://x.com/balance0014)).
 
 ## The two maps
 
 ### Deployment timeline
 
-The year marks the milestone written on each card. It may be a chain launch, a later cryptographic upgrade or a public testnet announcement. It does **not** mean every feature on that card existed in that year.
+Each card's year is the milestone written on it: a chain launch, a later cryptographic upgrade, or a public testnet. It doesn't mean every feature on the card existed that year. [Full-resolution PNG](charts/deployment-timeline-2026-10-23.png).
 
-[Download the full-resolution timeline](charts/deployment-timeline-2026-10-23.png).
-
-![Deployment timeline showing 17 crypto projects, their consensus mechanisms, signing schemes and limits, as of October 23, 2026.](charts/deployment-timeline-2026-10-23.png)
+![Deployment timeline of 17 crypto projects with their consensus, signing schemes and limits, as of October 23, 2026.](charts/deployment-timeline-2026-10-23.png)
 
 ### Algorithm map
 
-Projects can appear under more than one scheme. Account demonstrations, fallback paths, testnets and opt-in features are labeled. Validity proofs and key-encapsulation mechanisms have separate roles.
+A project can sit under more than one scheme, and opt-in features, fallbacks, testnets and demos are labeled. STARK proofs and key-encapsulation mechanisms are shown apart because they don't sign transactions. [Full-resolution PNG](charts/algorithm-map-2026-10-23.png).
 
-[Download the full-resolution algorithm map](charts/algorithm-map-2026-10-23.png).
+![Algorithm map grouping projects by cryptographic use, with a log-log chart of reference public-key and signature sizes.](charts/algorithm-map-2026-10-23.png)
 
-![Algorithm map grouping projects by cryptographic use, with a log-log comparison of reference public-key and signature sizes and application notes.](charts/algorithm-map-2026-10-23.png)
+## Easy to misread
 
-## A few details that matter
+- **Mochimo** is recorded as PoS, after its October 2026 switch. It ran PoW before that.
+- **QANplatform:** the QANX token trades, but QAN's post-quantum chain is still a testnet.
+- **Starknet:** the 2021 milestone is L2 Mainnet Alpha. The vote on becoming an independent L1 backed research; it didn't approve leaving Ethereum.
+- **Raqcoin:** 2018 is when its predecessor ABCMint launched, not when UOV was added. ABCMint's original Rainbow parameters are publicly broken. Raqcoin's guide still lists a Rainbow configuration (274) as the default, and this repo hasn't analyzed that configuration.
+- **Quantus and qtcchain** both use the ticker QTC. They're different chains, so go by the project ID and the sources.
 
-- **Mochimo:** the snapshot records PoS after its October 2026 transition, not its historical PoW consensus.
-- **QANplatform:** included as a public testnet. The existence of the QANX token is not evidence of a native mainnet launch.
-- **Starknet:** the 2021 milestone is L2 Mainnet Alpha. The independent-L1 vote supported research; it did not approve a move.
-- **Raqcoin:** the 2018 date refers to its ABCMint predecessor. It does not date the deployment of UOV. A published attack breaks the legacy Rainbow parameters; newer configurations need their own analysis.
-- **Quantus and qtcchain:** both use QTC, but they are separate chains. Use the project ID and source links, not the ticker alone.
+## What the data covers
 
-## What the data can tell you
+An opt-in post-quantum lock only protects coins you move into it. Old accounts, consensus keys and bridges stay as they were.
 
-It helps answer **what is used, where, under which conditions, and according to which source**. An optional post-quantum spending lock changes how spending is authorized for funds placed under that lock. It does not automatically change old accounts, consensus keys or bridges.
+The size table gives raw public-key and signature bytes for specific parameter sets. Those aren't transaction sizes, fees or a security ranking, and the UOV rows aren't measurements of Raqcoin transactions.
 
-The size table describes specific algorithm parameters and encodings. Its numbers are not complete transaction sizes, fee estimates, throughput measurements or a ranking of cryptographic security. The UOV examples are not measurements of Raqcoin transactions.
+When a claim cites the project's own documentation, read it as "the project says so", not as an audit. 19 of the 81 sources are pinned to a specific commit; project web pages can change or disappear.
 
-The source list separates project documentation, pinned code, block explorers and standards. A project document supports an attributed description; it is not an independent audit. The maps are a selected comparison, not a complete list of every post-quantum project. See [methodology](docs/methodology.md) for the inclusion criteria and limits.
+This is a selected comparison, not a list of every post-quantum project. The projects are the ones on the original maps plus those readers asked about; [methodology](docs/methodology.md) sets the minimum evidence bar.
 
 ## Reuse or contribute
 
-Download the data, cite the snapshot date and link back to this repository. If you change it, say what changed. Original data compilation, charts and prose are available under **CC BY 4.0**; scripts are **MIT**. Linked third-party material keeps its own terms. See [LICENSE](LICENSE).
+Download the data, cite the snapshot date and link back here. If you change it, say what changed. Data, charts and prose are **CC BY 4.0**; scripts are **MIT**. Linked third-party material keeps its own terms. See [LICENSE](LICENSE).
 
-To suggest an update, send the specific claim, a primary source and the network/version it applies to. Project teams are welcome to contribute; changes are reviewed against the same evidence standard. [Open a correction or project request](https://github.com/Balance0014/post-quantum-crypto-map/issues/new/choose).
+To correct something, send the specific claim, a primary source and the network or version it applies to. Project teams are welcome; changes go through the same evidence check. [Open a correction or project request](https://github.com/Balance0014/post-quantum-crypto-map/issues/new/choose).
 
-With Python 3.10 or later, you can check the files and regenerate the readable tables without installing packages:
+The scripts need Python 3.10+ and nothing else (CI runs 3.12):
 
 ```sh
-python3 scripts/validate.py
-python3 scripts/export.py
+python3 scripts/validate.py   # checks the files agree: IDs, link format, checksums, exports
+python3 scripts/export.py     # rebuilds the readable tables and CSVs
 ```
 
-The original PNGs are preserved release artifacts. The export script rebuilds tables and CSV files, not those PNGs.
+`validate.py` doesn't fetch the links or re-check claims; it catches mismatches between files. The original PNGs are release artifacts, and the export script doesn't redraw them.
 
 [Follow the research on X](https://x.com/balance0014) · [Changelog](CHANGELOG.md) · [How to cite](CITATION.cff)
